@@ -8,12 +8,11 @@ terraform {
   }
 }
 
-# Specifying the Docker provider configuration, in this case I am using local host 
+# Specifying the Docker provider configuration
 provider "docker" {
-
- host = "tcp://localhost:2375" # The localhost:2375 is the default address for the Docker daemon.
- # host = "unix:///var/run/docker.sock" - defaults to a Linux machine with Docker installed
- # host = "npipe:////.//pipe//docker_engine" - defaults to a Windows machine with Docker installed
+ host = "tcp://localhost:2375" # defaults to Docker local host.
+ # host = "unix:///var/run/docker.sock" - defaults to a Linux machine with Docker installed.
+ # host = "npipe:////.//pipe//docker_engine" - defaults to a Windows machine with Docker installed.
  
 }
 
